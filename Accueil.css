@@ -1,0 +1,157 @@
+:root{ --colorprefect:rgb(32, 142, 154);}
+
+.space{
+   text-align: center;
+    background-color:var(--colorprefect);
+    height: 300px;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 1px 5px 30px var(--colorprefect) ;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+  
+   
+}
+.space h5, p{
+    margin: 50px 0px;
+    font-size: 20px;
+}
+.space H2{
+    margin: 50px 0px;
+    font-size: 100px;
+    text-transform:lowercase;
+    font-weight:bold;
+    color: yellow;
+    box-shadow: 15px 5px 20px yellow;
+    letter-spacing:5px ;
+}
+.space input{
+    margin: 50px 0px;
+    width: 450px;
+    font-size: 17px;
+    padding: 15px;
+    color: white;
+    font-style: initial;
+    background-color: black;
+    border-radius: 50px;
+    border: 4px solid yellow;
+}
+.space input:hover{
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+.corp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    height: auto;
+    margin: 5px;
+    gap: 50px;
+    transition: 2s;
+    animation: move 2s ease-in;
+}
+@keyframes move {
+    0%{
+        transform: translateY(300px);
+    }
+     50%{
+        transform: translateY(150px);
+
+    
+}
+ 100%{
+        transform: translateY(0px);
+    }}
+.contenent{
+    width: 380px;
+    height: 450px;
+    text-align: center;
+    color: black;
+    border: 5px solid rgba(247, 242, 242, 0.21);
+    cursor: pointer;
+    transition:  2s ease;
+   
+
+    
+    
+}
+.contenent p{
+    max-height: 50px;
+    overflow: hidden;
+    opacity: 4;
+}
+.contenent:hover{
+    transform: scale(.96) ;
+    opacity: 0.09;
+   
+
+}
+
+.contenent .img{
+    height:300px;
+    width: 100%;
+   
+  
+    
+
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.contenent input{
+    padding: 7px 25px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 30px;
+
+    background-color: rgba(0, 0, 0, 0.541);
+    
+}
+.col{
+    height: 400px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(32, 142, 154);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.col input{
+   padding: 5px 5px ;
+   border: 4px solid ;
+   background-color: rgb(32, 142, 154);
+   color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration:none ;
+
+}
+.col input:hover{
+    background-color: yellow;
+    color: black;
+}
+.col p{
+    font-size: 30px;
+
+}
+ #foot{
+    animation: move 1s ease-in;
+}
+
+

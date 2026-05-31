@@ -1,0 +1,272 @@
+:root{ --colorprefect:rgb(32, 142, 154);}
+
+.animationsdiv{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(103, 211, 241);
+     transition: 0.5s ease-in-out; 
+     transform: scale(1); 
+    cursor: pointer;
+    border-radius: 50px;
+    display: none;
+   
+    
+   
+}
+ @keyframes changecolor {
+        0%{
+           background-color: rgb(103, 211, 241);
+
+        }
+        50%{
+             background-color:red
+        }
+        100%{
+           background-color:green
+        }
+        
+    }
+.animationsdiv:hover{
+     transform: rotate(360deg);
+    transform: scale(1.2); 
+    background-color: red;
+    animation: changecolor 5s ease-in;
+    
+    
+}
+.off{
+  
+    display: none;
+}
+.slider{
+    /* background-color: black; */
+    /* transform: scale(); */
+    overflow: hidden;
+   
+     
+}
+    
+.sliders:hover{
+    /* background-color: black; */
+    opacity: 0.5;
+    transform: scale(1.05);
+    transition: 2s ease-in-out;
+    background-color: black;
+    
+}
+.sliders{
+    width: 500px;
+    height: 450px;
+    border-radius: 40px;
+    opacity: 3;
+    border: 1px solid rgb(0, 255, 242);
+    box-shadow: rgb(226, 43, 2) 500px;
+    cursor: pointer;
+    
+    object-fit: cover;
+}
+.mesbouttons{
+    
+    display: flex;
+    position: absolute;
+    gap: 300px;
+    top: 350px;
+    text-align: center;
+    justify-content: center;
+    margin: 0px 50px;
+}
+.mesbouttons button {
+    font-size: 25px;
+    color: red;
+    background-color: rgb(231, 231, 187);
+    cursor: pointer;
+    border-radius: 40px;
+    width: 60px;
+}
+@media screen and (max-width:800px) {
+    .sliders{
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 10px;
+    
+}
+.mesbouttons{
+    
+    display: flex;
+    position: absolute;
+    gap: 80px;
+    top: 150px;
+    text-align: center;
+    justify-content: center;
+    /* margin: 0px 15px; */
+}
+.mesbouttons button, i{
+    font-size: 10px;
+    color: red;
+    
+    background-color: rgb(220, 220, 153);
+    border-radius: 5px;
+    margin: 0px 0px;
+   padding: 0px 0px;
+   cursor: pointer;
+   
+}
+
+
+    
+}
+/* style pour la section de caseroul */
+.hero{
+position: relative;
+height: 90vh;
+background-image: url("/Images/image\ \(1\).jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+ overflow: hidden; 
+transition: background-image 0.5s ease-in-out;
+
+    
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.53);
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    
+
+
+}
+.content{
+    position: relative;
+    text-align: center;
+    color: white;
+    
+    animation: deplacement  5s ;
+    z-index: 2;
+   
+   
+    
+}
+#title{
+    font-size: 70px;
+
+}
+#description{
+    font-size: 50px ;
+}
+.content button{
+    background-color: rgb(120, 238, 120);
+    width: 250px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+/*  Animations with keyframes */
+@keyframes deplacement{
+    0%{
+        /* transform: translateX(-150px); */
+        transform:  translateY(150px);
+        opacity: 0.5;
+    }
+    20%{
+        transform: translateY(0px);
+        opacity: 1;
+         
+    }
+    85%{
+        transform: translateY(0px);
+        opacity: 1;
+         
+    }
+    100%{
+        transform: translateY(-20px);
+        opacity: 0;
+         
+    }
+}
+.contact{
+    height: 110vh;
+    display: grid;
+    padding: 5px 10px;
+    grid-template-columns:1fr 1fr  ;
+    justify-content: center;
+    align-items: center;
+
+}
+.cart iframe{
+    margin: 0px 40px;
+    height: 100vh;
+}
+.form-cart{
+    width: 98%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorprefect);
+    border: 1px solid rgba(0, 0, 0, 0.371);
+    padding: 20px;
+
+    
+}
+.form-cart .h2{
+    font-size: 40px;
+    color: rgb(243, 243, 66);
+    margin: 0;
+    padding: 0;
+}
+.form-cart p{
+    font-size: 30px;
+    color: white;
+}
+.form-cart label{
+    font-size: 20px;
+    color: white;
+}
+.formulaire #name, #email, #text {
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.371);
+    
+}
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    padding: 5px ;
+    
+
+}
+.formulaire  #message{
+    max-height: 500px;
+    min-height: 200px;
+    resize: vertical;
+    border-radius: 15px;
+    padding: 5px 20px;
+
+}
+.formulaire  #send{
+    height: 40px;
+    width: 180px;
+    padding: 5px 20px;
+    background-color: rgb(243, 243, 66);
+    color: var(--colorprefect);
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.formulaire  #send:hover{
+    transition: 1s ease;
+    color: white;
+    background-color: var(--colorprefect);
+
+}
+

@@ -1,0 +1,384 @@
+:root{ --colorprefect:rgb(32, 142, 154);
+--colorprimate:yellow;}
+body { font-family: "Poppins", sans-serif; 
+    background: white; 
+    margin:0; 
+    padding:0;
+    opacity: 0; 
+    animation: pageload 2s ease-in-out forwards;
+    font-weight: 10px;
+    font-style: normal;
+}
+    
+@keyframes pageload{
+        to{opacity: 1;  }
+    }
+header{
+    
+    height: 100px;
+    width: auto;
+    top:0px ;
+    position:sticky;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  var(--colorprefect);
+    padding: 3px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.028);
+  
+}
+header #Logo a{
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    
+}
+header #Logo a img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+
+
+
+}
+header #Logo  figcaption{
+    font-size: 18px;
+   
+    
+}
+
+/* style pour le nav bar  */
+#Bare-navigation{
+
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+#Bare-navigation #search input{
+    width: 230px;
+    height: 30px;
+    border-radius: 25px;
+    border: 1px rgba(138, 137, 137, 0.156) solid;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px ;
+    padding: 5px 10px;
+
+
+}
+#Bare-navigation ul{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+#Bare-navigation ul li{
+    list-style: none; }
+#Bare-navigation ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+/* Ici les styles au survol */
+#Bare-navigation ul li a:hover{
+    color: var(--colorprimate);
+    text-decoration: underline 2px white;
+    transition: 1s ease;
+    text-underline-offset: 10px;
+
+}
+header #loging li{
+    list-style: none;
+    
+
+}
+header #loging li a{
+     list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    
+
+}
+header #loging li a:hover{
+    color: var(--colorprimate);
+    transition: 1s ease;
+    text-decoration: underline 2px white;
+    text-underline-offset: 10px;
+    
+    
+
+}
+/* ici commence le style presentation-accueil */
+#contener .presentation-accueil{
+    /* background-image: url("/vue-voiture-3d.avif") ; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+    margin:15px;
+    
+
+}
+#contener .presentation-accueil h4{
+    font-size: 30px;
+    color: var(--colorprimate);
+    background-color:  var(--colorprefect);
+    padding: 2px 20px;
+    /* border: 1px solid violet; */
+    border-radius: 2%;
+    display: inline-block;
+
+
+}
+#contener .presentation-accueil p{
+    color: rgb(63, 61, 61);
+    font-size: 25px;
+    display: inline-block;
+    margin: 10px 20px;
+
+}
+#contener .presentation-accueil input{
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    background-color:  rgb(84, 223, 221);
+    margin-top: 100px;
+    border-radius: 5%;
+
+
+}
+marquee{
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    color: black;
+    
+}
+marquee a{
+    color: rgb(84, 223, 221);
+    text-decoration: none;
+}
+
+/* Ici commence le style de la seconde section */
+.st-presentation{
+    background-color: white;
+    height: 80vh;
+    display: flex;
+    width: 100%;
+
+}
+
+.slider-presentation{
+    height: 100%;
+    width: 50%;
+    padding: 10px 40px;
+}
+.slider-presentation .titre{
+    font-size: 45px;
+}
+.slider-presentation .titre span{
+    color: var(--colorprefect);
+}
+.slider-presentation .P-presentation{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+
+}
+.slider-image{
+    height: 100%;
+    width: 50%;
+}
+.slider-image img{
+    height: 100%;
+    width: 100%;
+}
+/* Ici commence le style de la 3e section  */
+
+#a-propos{
+    background-color: var(--colorprefect);
+    height: 70vh;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    transition: 3s ease-in;
+    z-index: 50;
+    animation:move 2s ease ;
+
+}
+#a-propos .slider-image-a-propos{
+    height: 100%;
+    width: 50%;
+
+}
+#a-propos .slider-image-a-propos img{
+    height: 85%;
+    width: 85%;
+    padding: 40px;
+    border-radius: 9%;
+    
+
+}
+#a-propos #description{
+    height: 100%;
+    width: 50%;
+    padding: 10px 40px;
+
+}
+#a-propos #description h2{
+     font-size: 30px;
+     color: white;
+     text-align: start;
+
+}
+#a-propos #description p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+/* Ici commence les styles de la 2ème section */
+.st-formation{
+    /* background-color: red; */
+    text-align: start;
+    padding: 10px;
+    
+}
+.st-formation-titre{
+    height: 30vh;
+    width: auto;
+    text-align: center;
+
+
+}
+.st-formation-titre h4{
+    font-size: 35px;
+    
+}
+.st-formation-titre p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.568);
+
+}
+#contenant-formation{
+    display: flex;
+    flex-wrap: wrap;
+    gap:50px ;
+    justify-content: center;
+    
+   
+}
+
+.formation-n1{
+    height: 530px;
+    width: 350px;
+    /* background-color: green; */
+    border-radius: 5%;
+    border-top: 5px solid  rgb(84, 223, 221) ;
+    padding: 15px;
+    cursor: pointer;
+    
+
+}
+/* Effest au survol sur la section des formation */
+.formation-n1:hover{
+    /* background-color: rgba(246, 244, 242, 0); */
+    transform: translateY(-4px);
+    transition: 1s;
+    
+    
+
+}
+
+.formation-img-titre{
+    height:80px ;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.formation-img-titre img{
+    height: 50px ;
+    width: 50px;
+    border-radius: 20%;
+
+}
+.formation-img-titre h5 a{
+    text-decoration: none;
+    color: rgb(84, 223, 221) ;
+    font-size: 15px;
+    width:  200px;
+}
+.formation-n1 .la-formation  h3 a{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+
+}
+.formation-n1 .details p{
+    justify-content: space-between;
+    row-gap: 400px;
+     
+}
+.formation-n1 .details p strong{
+    font-size: 20px;
+    margin-right: 100px;
+    text-decoration: underline;
+}
+
+/* ICi commence les styles de footer */
+#foot{
+    height: 50vh;
+    display: flex;
+}
+#foot .st-foot{
+    height: 100%;
+    width:300px;
+    padding:10px  40px;
+}
+#foot .st-foot h3{
+    font-size: 18px;
+    color: var(--colorprefect ) ;
+    
+}
+#foot .st-foot ul li{
+    list-style: none;
+    margin: 20px 0px;
+    
+    }
+#foot .st-foot ul li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.697);
+    font-size: 18px;
+}
+#foot .st-foot ul li a:hover{
+    color: var(--colorprimate);
+    text-decoration: underline 2px white;
+}
+#foot .st-foot input{
+    background-color: brown;
+    margin: 20px 0px;
+    flex-direction: column;
+    
+    }
+#my-copyright{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
