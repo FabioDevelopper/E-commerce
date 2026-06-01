@@ -17,7 +17,7 @@
 header{
     
     height: 15vh; 
-    width: auto;
+    max-width: 100%;
     top:0px ;
     position:sticky;
     z-index: 1000;
@@ -58,17 +58,17 @@ header #Logo  figcaption{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    
 }
 #Bare-navigation #search input{
-    width: 230px;
+    width: 200px;
     max-width: 100%;
-    height: 45px;
+    height: 43px;
     border-radius: 25px;
     border: 1px rgba(138, 137, 137, 0.156) solid;
     outline: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px ;
+    font-size: 15px ;
     padding: 5px 10px;
 
 
@@ -87,7 +87,7 @@ header #Logo  figcaption{
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 /* Ici les styles au survol */
 #Bare-navigation ul li a:hover{
@@ -107,7 +107,7 @@ header #loging li a{
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     
 
 }
@@ -226,14 +226,14 @@ marquee a{
     padding: 10px 40px;
 }
 .slider-presentation .titre{
-    font-size: 45px;
+    font-size: 35px;
 }
 .slider-presentation .titre span{
     color: var(--colorprefect);
 }
 .slider-presentation .P-presentation{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 
 }
 .slider-image{
@@ -307,7 +307,7 @@ marquee a{
 .formation-n1{
     min-height: 430px;
     max-height: 430px;
-    max-width: 350px;
+    max-width: 300px;
     border-radius: 5%;
     border-top: 5px solid  rgb(84, 223, 221) ;
     padding: 15px;
