@@ -30,7 +30,7 @@ header{
   
 }
 header #Logo a{
-    width: 200px;
+    width: 100px;
     height: 100%;
     text-align: center;
     display: flex;
@@ -47,7 +47,7 @@ header #Logo a img{
 
 }
 header #Logo  figcaption{
-    font-size: 18px;
+    font-size: 15px;
    
     
 }
@@ -61,9 +61,9 @@ header #Logo  figcaption{
     
 }
 #Bare-navigation #search input{
-    width: 200px;
-    max-width: 100%;
-    height: 43px;
+    
+    max-width: 200px;
+    height: 30px;
     border-radius: 25px;
     border: 1px rgba(138, 137, 137, 0.156) solid;
     outline: none;
@@ -77,17 +77,64 @@ header #Logo  figcaption{
 
     display: flex;
     justify-content: space-between;
+    
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
+/*Début  Style pour les sous menu bar */
+#Bare-navigation .hunderaccueil{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    padding: 20px;
+    display: none;
+    min-width: 300px;
+    width: auto;
+    background-color: rgba(91, 90, 90, 0.658) ;
+}
+#Bare-navigation .hunderaccueil ul li{
+    list-style: none;  text-align: center; 
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+#Bare-navigation  .hunderaccueil ul li a,i{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+/* Ici les styles au survol */
+#Bare-navigation .hunderaccueil ul li a,i:hover{
+    color: var(--primary);
+    text-decoration: underline 2px white;
+    transition: 1s ease;
+    text-underline-offset: 8px;
+
+}
+/*  Fin Style pour les sous menu bar */
+
 #Bare-navigation ul li{
-    list-style: none; }
+    list-style: none;
+position: relative; }
 #Bare-navigation ul li a {
     list-style: none;
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 /* Ici les styles au survol */
 #Bare-navigation ul li a:hover{
@@ -107,7 +154,7 @@ header #loging li a{
     text-decoration: none;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     
 
 }
@@ -115,7 +162,7 @@ header #loging li a:hover{
     color: var(--primary);
     transition: 1s ease;
     text-decoration: underline 2px white;
-    text-underline-offset: 10px;
+    text-underline-offset: 5px;
 
     
     
@@ -134,9 +181,11 @@ align-items: center;
 justify-content: center;
  overflow: hidden; 
 transition: background-image 0.5s ease-in-out;
+cursor: pointer;
 
     
 }
+.hero:hover{ filter: brightness(0.8);}
 .overlay{
     background-color: rgba(0, 0, 0, 0.53);
     position: absolute;
@@ -158,18 +207,18 @@ transition: background-image 0.5s ease-in-out;
     
 }
 #title{
-    font-size: 70px;
+    font-size: 30px;
 
 }
 #description{
-    font-size: 50px ;
+    font-size: 20px ;
 }
 .content button{
     background-color: rgb(120, 238, 120);
-    width: 250px;
+    width: 200px;
     padding: 10px 20px;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 20px;
     cursor: pointer;
     
@@ -200,15 +249,16 @@ transition: background-image 0.5s ease-in-out;
 /* fin de style presentation-accueil */
 /* Début style pour les informations defilantes */
 marquee{
-    font-size: 30px;
+    font-size: 20px;
     align-items: center;
     text-align: center;
     color: black;
     
 }
 marquee a{
-    color: rgb(84, 223, 221);
+    color: var(--colorprefect);
     text-decoration: none;
+    font-size: 20px;
 }
 /*  Fin style pour les informations defilantes */
 /* Début style de la  section de presentation situé en bas des informations déroulantes  */
@@ -223,17 +273,17 @@ marquee a{
 .slider-presentation{
     height: 100%;
     width: 50%;
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 .slider-presentation .titre{
-    font-size: 35px;
+    font-size: 40px;
 }
 .slider-presentation .titre span{
     color: var(--colorprefect);
 }
 .slider-presentation .P-presentation{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 .slider-image{
@@ -268,7 +318,7 @@ marquee a{
 
 }
 .st-formation-titre h4{
-    font-size: 35px;
+    font-size: 20px;
     
 }
 .st-formation-titre p{
@@ -281,10 +331,10 @@ marquee a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:50px ;
+    gap:30px ;
     justify-content: center;
     align-items: center;
-    padding: 15px 0px;
+    padding: 10px 0px;
     animation: moveplus 2s ease;
    
 }
@@ -305,13 +355,15 @@ marquee a{
     }
 }
 .formation-n1{
-    min-height: 430px;
     max-height: 430px;
     max-width: 300px;
+    
+
     border-radius: 5%;
     border-top: 5px solid  rgb(84, 223, 221) ;
     padding: 15px;
     cursor: pointer;
+    
     animation: moveplus 1s ease;
     
     
@@ -321,6 +373,7 @@ marquee a{
 .formation-n1:hover{
     transform: translateY(-7px);
     transition: 1s ;
+    
     
 }
 
@@ -345,7 +398,7 @@ marquee a{
     width:  200px;
 }
 .formation-n1 .la-formation  h3 a{
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
     max-height: 50px;
@@ -426,7 +479,7 @@ marquee a{
 }
 #a-propos #description p{
     
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     
 }
@@ -434,9 +487,11 @@ marquee a{
 
 /* Début styles de footer */
 #foot{
-    height: 60vh;
+    height: 80vh;
     display: flex;
     color: rgba(0, 0, 0, 0.773);
+    animation: move 1s ease-in;
+    
 }
 #foot .st-foot{
     height: 100%;
@@ -446,9 +501,12 @@ marquee a{
 #foot .st-foot h3 a{
     color: var(--colorprefect) ;
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     text-decoration: none;
     
+}
+#foot .st-foot p{
+    font-size: 12px;
 }
 #foot .st-foot h3 a:hover{
     color: var(--primary);
@@ -458,13 +516,13 @@ marquee a{
 }
 #foot .st-foot ul li{
     list-style: none;
-    margin: 20px 0px;
+    margin: 5px 0px;
     
     }
-#foot .st-foot ul li a{
+#foot .st-foot ul li a,i{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.773);
-    font-size: 20px;
+    font-size: 12px;
 }
 #foot .st-foot ul li a:hover{
      color: var(--primary);
@@ -472,12 +530,7 @@ marquee a{
     transition: 1s ;
     text-underline-offset: 8px;
 }
-#foot .st-foot input{
-    background-color: brown;
-    margin: 20px 0px;
-    flex-direction: column;
-    
-    }
+
 #my-copyright{
     text-align: center;
     align-items: center;

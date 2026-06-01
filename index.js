@@ -34,7 +34,47 @@ setInterval(()=>{
     },10);
     
 },7000);
-// section pour le caseroul
+//Utilisation des elements DOM avec les element de navbar au survol
+
+// 1. On sélectionne les listes d'éléments
+const tousLesLiens = document.querySelectorAll(".lien");
+const tousLesSousMenus = document.querySelectorAll(".hunderaccueil");
+
+// 2. CORRECTION : On utilise .forEach() pour parcourir la liste
+tousLesLiens.forEach((Mesliens, index) => {
+    const sousmenu = tousLesSousMenus[index];
+    let timer; 
+
+    // Maintenant, "Mesliens" représente UN SEUL lien de la liste à la fois
+    Mesliens.addEventListener('mouseover', () => {
+        if (sousmenu) {
+            clearTimeout(timer);
+            sousmenu.style.display = "block";
+        }
+    });
+
+    Mesliens.addEventListener('mouseleave', () => {
+        if (sousmenu) {
+            timer = setTimeout(() => {
+                sousmenu.style.display = "none";
+            }, 500);
+        }
+    });
+
+    // Gestion du sous-menu pour éviter qu'il ne se ferme au survol
+    if (sousmenu) {
+        sousmenu.addEventListener('mouseover', () => {
+            clearTimeout(timer);
+        });
+
+        sousmenu.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                sousmenu.style.display = "none";
+            }, 500);
+        });
+    }
+});
+
  
 
 
