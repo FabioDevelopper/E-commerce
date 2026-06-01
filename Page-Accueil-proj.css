@@ -1,11 +1,12 @@
-:root{ --colorprefect:rgb(32, 142, 154);
---colorprimate:yellow;}
-body { font-family: "Poppins", sans-serif; 
+ :root{--colorprefect:rgb(32, 142, 154);
+    --primary:yellow;
+ }
+ body { font-family: "Poppins", sans-serif; 
     background: white; 
     margin:0; 
     padding:0;
     opacity: 0; 
-    animation: pageload 2s ease-in-out forwards;
+    animation: pageload 5ms ease-in-out forwards;
     font-weight: 10px;
     font-style: normal;
 }
@@ -15,7 +16,7 @@ body { font-family: "Poppins", sans-serif;
     }
 header{
     
-    height: 100px;
+    height: 15vh; 
     width: auto;
     top:0px ;
     position:sticky;
@@ -24,7 +25,7 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color:  var(--colorprefect);
-    padding: 3px 8px;
+    padding: 3px 10px;
     border: 1px solid rgba(0, 0, 0, 0.028);
   
 }
@@ -44,8 +45,6 @@ header #Logo a img{
     height: 60px;
     border-radius: 100%;
 
-
-
 }
 header #Logo  figcaption{
     font-size: 18px;
@@ -56,14 +55,15 @@ header #Logo  figcaption{
 /* style pour le nav bar  */
 #Bare-navigation{
 
-     display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 100px;
 }
 #Bare-navigation #search input{
     width: 230px;
-    height: 30px;
+    max-width: 100%;
+    height: 45px;
     border-radius: 25px;
     border: 1px rgba(138, 137, 137, 0.156) solid;
     outline: none;
@@ -91,10 +91,10 @@ header #Logo  figcaption{
 }
 /* Ici les styles au survol */
 #Bare-navigation ul li a:hover{
-    color: var(--colorprimate);
+    color: var(--primary);
     text-decoration: underline 2px white;
     transition: 1s ease;
-    text-underline-offset: 10px;
+    text-underline-offset: 8px;
 
 }
 header #loging li{
@@ -112,59 +112,93 @@ header #loging li a{
 
 }
 header #loging li a:hover{
-    color: var(--colorprimate);
+    color: var(--primary);
     transition: 1s ease;
     text-decoration: underline 2px white;
     text-underline-offset: 10px;
+
     
     
 
 }
 /* ici commence le style presentation-accueil */
-#contener .presentation-accueil{
-    /* background-image: url("/vue-voiture-3d.avif") ; */
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 50px;
-    margin:15px;
+.hero{
+position: relative;
+height: 90vh;
+background-image: url("/Images/image\ \(1\).jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+ overflow: hidden; 
+transition: background-image 0.5s ease-in-out;
+
+    
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.53);
+    position: absolute;
+    z-index: 1;
+    inset: 0;
     
 
-}
-#contener .presentation-accueil h4{
-    font-size: 30px;
-    color: var(--colorprimate);
-    background-color:  var(--colorprefect);
-    padding: 2px 20px;
-    /* border: 1px solid violet; */
-    border-radius: 2%;
-    display: inline-block;
-
 
 }
-#contener .presentation-accueil p{
-    color: rgb(63, 61, 61);
-    font-size: 25px;
-    display: inline-block;
-    margin: 10px 20px;
-
-}
-#contener .presentation-accueil input{
-    width: 150px;
+.content{
+    position: relative;
+    text-align: center;
     color: white;
-    font-size: 20px;
-    height: 40px;
-    background-color:  rgb(84, 223, 221);
-    margin-top: 100px;
-    border-radius: 5%;
-
+    
+    animation: deplacement  5s ;
+    z-index: 2;
+   
+   
+    
+}
+#title{
+    font-size: 70px;
 
 }
+#description{
+    font-size: 50px ;
+}
+.content button{
+    background-color: rgb(120, 238, 120);
+    width: 250px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+/*  Animations with keyframes */
+@keyframes deplacement{
+    0%{
+        /* transform: translateX(-150px); */
+        transform:  translateY(150px);
+        opacity: 0.5;
+    }
+    20%{
+        transform: translateY(0px);
+        opacity: 1;
+         
+    }
+    85%{
+        transform: translateY(0px);
+        opacity: 1;
+         
+    }
+    100%{
+        transform: translateY(-20px);
+        opacity: 0;
+         
+    }
+}
+/* fin de style presentation-accueil */
+/* Début style pour les informations defilantes */
 marquee{
     font-size: 30px;
     align-items: center;
@@ -176,8 +210,8 @@ marquee a{
     color: rgb(84, 223, 221);
     text-decoration: none;
 }
-
-/* Ici commence le style de la seconde section */
+/*  Fin style pour les informations defilantes */
+/* Début style de la  section de presentation situé en bas des informations déroulantes  */
 .st-presentation{
     background-color: white;
     height: 80vh;
@@ -210,8 +244,150 @@ marquee a{
     height: 100%;
     width: 100%;
 }
-/* Ici commence le style de la 3e section  */
+/* Fin style de la  section de presentation situé en bas des informations déroulantes  */
 
+
+
+/* Début  style du bloc  de formations  situé juste en haut  le  du bloc de A propos */
+.st-formation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: start;
+    padding: 5px ;
+
+    
+}
+.st-formation-titre{
+    max-height: 40vh;
+
+    width: auto;
+    text-align: center;
+    background-color: var(--colorprefect);
+
+
+}
+.st-formation-titre h4{
+    font-size: 35px;
+    
+}
+.st-formation-titre p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+
+}
+/* style des blocs de formations */
+#contenant-formation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:50px ;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+    animation: moveplus 2s ease;
+   
+}
+@keyframes moveplus{
+    0%{
+        transform:translate(-50px);
+        transition: 1s ;
+        
+
+    }
+
+     100%{
+        transform:translate(0px);
+        transition: 1s ;
+         
+
+
+    }
+}
+.formation-n1{
+    min-height: 430px;
+    max-height: 430px;
+    max-width: 350px;
+    border-radius: 5%;
+    border-top: 5px solid  rgb(84, 223, 221) ;
+    padding: 15px;
+    cursor: pointer;
+    animation: moveplus 1s ease;
+    
+    
+
+}
+/* Effet au survol sur la section des formation */
+.formation-n1:hover{
+    transform: translateY(-7px);
+    transition: 1s ;
+    
+}
+
+.formation-img-titre{
+    max-height:80px ;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.formation-img-titre img{
+    height: 50px ;
+    width: 50px;
+    border-radius: 20%;
+
+}
+.formation-img-titre h5 a{
+    text-decoration: none;
+    color: rgb(84, 223, 221) ;
+    font-size: 15px;
+    width:  200px;
+}
+.formation-n1 .la-formation  h3 a{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    max-height: 50px;
+    overflow: hidden;
+
+}
+.formation-n1 .la-formation{
+    max-height: 250px;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.formation-n1 .details{
+   
+    display: flex;
+    flex-direction: row;
+    max-height: 80px;
+    min-height: 80px;
+    overflow: hidden;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+}
+.formation-n1 .details p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    font-size: 15px;
+    
+    
+     
+}
+.formation-n1 .details p strong{
+    font-size: 20px;
+    text-decoration: underline;
+    
+}
+/* Fin  style du bloc  de formations  situé juste en haut  le  du bloc de A propos */
+
+/* Début  style du bloc  de A propos  situé juste en haut de footer*/
 #a-propos{
     background-color: var(--colorprefect);
     height: 70vh;
@@ -249,113 +425,36 @@ marquee a{
 
 }
 #a-propos #description p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    color: white;
-}
-/* Ici commence les styles de la 2ème section */
-.st-formation{
-    /* background-color: red; */
-    text-align: start;
-    padding: 10px;
     
-}
-.st-formation-titre{
-    height: 30vh;
-    width: auto;
-    text-align: center;
-
-
-}
-.st-formation-titre h4{
-    font-size: 35px;
-    
-}
-.st-formation-titre p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgba(0, 0, 0, 0.568);
-
-}
-#contenant-formation{
-    display: flex;
-    flex-wrap: wrap;
-    gap:50px ;
-    justify-content: center;
-    
-   
-}
-
-.formation-n1{
-    height: 530px;
-    width: 350px;
-    /* background-color: green; */
-    border-radius: 5%;
-    border-top: 5px solid  rgb(84, 223, 221) ;
-    padding: 15px;
-    cursor: pointer;
-    
-
-}
-/* Effest au survol sur la section des formation */
-.formation-n1:hover{
-    /* background-color: rgba(246, 244, 242, 0); */
-    transform: translateY(-4px);
-    transition: 1s;
-    
-    
-
-}
-
-.formation-img-titre{
-    height:80px ;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-.formation-img-titre img{
-    height: 50px ;
-    width: 50px;
-    border-radius: 20%;
-
-}
-.formation-img-titre h5 a{
-    text-decoration: none;
-    color: rgb(84, 223, 221) ;
-    font-size: 15px;
-    width:  200px;
-}
-.formation-n1 .la-formation  h3 a{
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-
-}
-.formation-n1 .details p{
-    justify-content: space-between;
-    row-gap: 400px;
-     
-}
-.formation-n1 .details p strong{
     font-size: 20px;
-    margin-right: 100px;
-    text-decoration: underline;
+    color: white;
+    
 }
+/* Fin  style du bloc  de A propos  situé juste en haut de footer*/
 
-/* ICi commence les styles de footer */
+/* Début styles de footer */
 #foot{
-    height: 50vh;
+    height: 60vh;
     display: flex;
+    color: rgba(0, 0, 0, 0.773);
 }
 #foot .st-foot{
     height: 100%;
     width:300px;
     padding:10px  40px;
 }
-#foot .st-foot h3{
-    font-size: 18px;
-    color: var(--colorprefect ) ;
+#foot .st-foot h3 a{
+    color: var(--colorprefect) ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
     
+}
+#foot .st-foot h3 a:hover{
+    color: var(--primary);
+    text-decoration: underline 2px white;
+    transition: 1s ;
+    text-underline-offset: 8px;
 }
 #foot .st-foot ul li{
     list-style: none;
@@ -364,12 +463,14 @@ marquee a{
     }
 #foot .st-foot ul li a{
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.697);
-    font-size: 18px;
+    color: rgba(0, 0, 0, 0.773);
+    font-size: 20px;
 }
 #foot .st-foot ul li a:hover{
-    color: var(--colorprimate);
+     color: var(--primary);
     text-decoration: underline 2px white;
+    transition: 1s ;
+    text-underline-offset: 8px;
 }
 #foot .st-foot input{
     background-color: brown;
@@ -382,3 +483,4 @@ marquee a{
     align-items: center;
     justify-content: center;
 }
+/* Début styles de footer */
