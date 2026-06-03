@@ -74,6 +74,20 @@ tousLesLiens.forEach((Mesliens, index) => {
         });
     }
 });
+let Open=document.querySelector(".ouvrir");
+let menu=document.querySelector("#Bare-navigation ul");
+Open.addEventListener("click",() =>{
+    menu.classList.toggle("affiche");
+if(menu.classList.contains("affiche")){
+    Open.innerHTML='<i class="fa-solid fa-x"></i>';
+
+}
+else {
+    Open.innerHTML='<i class="fa-solid fa-bars"></i>';
+}
+
+
+})
 
  
 

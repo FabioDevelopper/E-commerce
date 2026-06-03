@@ -2,6 +2,9 @@
   --colorprefect: rgb(32, 142, 154);
   --primary: yellow;
 }
+*{
+    box-sizing: border-box;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -70,7 +73,7 @@ header #Logo figcaption {
 
 }
 
-#Bare-navigation #search input {
+#search input {
   max-width: 200px;
   height: 30px;
   border-radius: 25px;
@@ -186,11 +189,32 @@ header #loging li a:hover {
   transition: 1s ease;
   text-decoration: underline 2px white;
   text-underline-offset: 5px;
-
-
-
-
 }
+/* Début du style du menu bar  */
+.fermer {
+
+height: 50px;
+width: 50px;
+display: none;
+    
+}
+.ouvrir{
+height: 50px;
+width: 50px;
+display: none;  
+}
+.ouvrir i{
+    
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+   }
+.fermer i{
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}
+/* Fin du style du menu bar  */
 
 /* ici commence le style presentation-accueil */
 .hero {
@@ -331,7 +355,7 @@ header #loging li a:hover {
 /* Début style de la section des images */
 /* Début styles de footer */
 #foot{
-    height: 80vh;
+    height: 60vh;
     display: flex;
     color: rgba(0, 0, 0, 0.773);
     animation: move 1s ease-in;
@@ -382,3 +406,83 @@ header #loging li a:hover {
 }
 /* Fin styles de footer */
 
+/*  */
+@media screen and (max-width: 1024px) {
+ header{
+        width: auto;
+        height: 70px;}
+    #Bare-navigation, #loging{
+        display: none;}
+    .ouvrir {
+        display: block;}
+    .hero{
+        height: 30vh;}
+    #title{
+    font-size: 20px;}
+#description{
+    font-size: 15px ;}
+.content button{
+    width: 120px;
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 5px;}
+
+.picturessection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+.images {
+  height: 400px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px 30px;
+
+  
+
+}
+
+  /* Début styles de footer */
+#foot{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+    max-width: 100%;
+}
+#foot .st-foot{
+    height: auto;
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+    max-width: 100%;
+
+    padding: 0px  0px;
+}
+
+ #foot .st-foot p{
+    font-size: 12px;
+}
+#foot .st-foot ul {
+    list-style: none;
+    text-align: start;
+    margin: 0px 0px;}
+#foot .st-foot ul li{
+    list-style: none;
+    margin: 0px 0px;}
+#my-copyright{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+  
+  }
